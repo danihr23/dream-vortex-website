@@ -88,11 +88,13 @@ export default CanvasChairScroll;
 
 // Styled Components
 const HeroSequenceWrapper = styled.div`
+
   height: 530vh;
 `;
 
 const StickyElement = styled.div`
   position: sticky;
+  z-index:7 ;
   top: 0;
   height: 120vh;
   overflow: hidden;

@@ -27,7 +27,6 @@ position: relative;
   background: url(${bgr} ) right center no-repeat;
   background-size: cover;
   padding: 80px 80px 280px 80px;
-  min-height:583px ;
 `;
 
 const TextWrapper = styled.div`

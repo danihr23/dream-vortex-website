@@ -1,6 +1,5 @@
 
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React,{useCallback,useState,useEffect} from 'react';
 import styled from 'styled-components/macro';
 import IntroScreen from './components/IntroScreen';
 import CanvasChairScroll from './components/CanvasChairScroll';
@@ -9,12 +8,23 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Team from './components/Team';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
+import Cookies from './components/Cookies';
+import Toolbar from './components/Toolbar';
+
 
 
 function App() {
 
   const [isLoading,setIsLoading] = useState(true)
+  const [isAgree, setIsAgree] = useState(false);
+  const [isFooterPriveceClicked, setIsFooterPriveceClicked] = useState(false);
 
+  const onPrivacyClick = useCallback(()=>{
+    if(!isAgree)  return;  
+     setIsAgree(false)
+     setIsFooterPriveceClicked(true)
+  },[])
   useEffect(()=>{
   const fakeDataFetch =()=>{
     setTimeout(()=>{
@@ -28,16 +38,18 @@ function App() {
   return (
     <Wrapper >
      {isLoading && (
-      <IntroScreen/>
-     ) }
+       <IntroScreen/>
+      ) }
        <WrapperCanvas isLoading={isLoading}>
+        <Toolbar/>
         <CanvasChairScroll/>
         <Header/>
         <About/>
+        <Cookies setIsAgree={setIsAgree}  isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />
         <Projects/>
         <Team/>
         <ContactForm/>
-        <Footer>You are awesome!</Footer>
+        <Footer onClickPrivacy={onPrivacyClick}/> 
       </WrapperCanvas>
     </Wrapper>
   );
@@ -53,11 +65,4 @@ const Wrapper =styled.div`
 const WrapperCanvas = styled.div`
   display: ${props => props.isLoading && 'none' };
 `;
-const Footer = styled.footer`
-  background: #f5f5f7;
-  font-weight: 700;
-  font-size: 40px;
-  height: 400px;
-  display: grid;
-  place-items: center;
-`;
+
