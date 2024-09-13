@@ -1,6 +1,6 @@
 
 
-import styled from 'styled-components/macro';
+import styled,{keyframes} from 'styled-components/macro';
 import logo from '../asets/LogoCompany.png';
 
 
@@ -13,13 +13,16 @@ const Toolbar = () => {
             <a style={{ textDecoration: "none" }} href='#sectionTwo'>
                 <Contact>Contact</Contact>
             </a>
-
-
         </Wrapper>
     )
 }
 
 export default Toolbar;
+const appearToolbar= keyframes`
+
+to {
+  opacity: 1;
+}`;
 
 
 
@@ -35,8 +38,13 @@ z-index: 5;
   background: transparent;
   box-sizing:border-box ;
   padding:40px ;
+  opacity:0 ;
 
-   
+  transform-origin: center;
+      animation-name: ${appearToolbar};
+      animation-duration: 250ms;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards
 `;
 
 const Logo = styled.div`

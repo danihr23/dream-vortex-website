@@ -20,17 +20,7 @@ function App() {
   const [isLoading,setIsLoading] = useState(true)
   const [isAgree, setIsAgree] = useState(false);
   const [isFooterPriveceClicked, setIsFooterPriveceClicked] = useState(false);
-  const [isToolbarVisible, setIsToolbarVisible] = useState(true);
-  const canvasPositonRef = useRef(null);
-
-
-  const handleScroll = () => {
-    if (canvasPositonRef.current) {
-      const canvasPosition = canvasPositonRef.current.getBoundingClientRect();
-      const isHeaderVisible = canvasPosition.top <= window.innerHeight && canvasPosition.bottom >= 0;
-      setIsToolbarVisible(!isHeaderVisible); 
-    }
-  };
+  const [isToolbarVisible, setIsToolbarVisible] = useState(false);
 
   const onPrivacyClick = useCallback(()=>{
      setIsAgree(false)
@@ -47,11 +37,6 @@ function App() {
 
   fakeDataFetch();
 
-  window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   },[])
 
 
@@ -60,11 +45,10 @@ function App() {
      {isLoading && (
        <IntroScreen/>
       ) }
-       <ContentWrapper isLoading={isLoading}>
-        <WrapperCanvas ref={canvasPositonRef}>
-         <CanvasChairScroll/>
-        </WrapperCanvas>
-        {isToolbarVisible && <Toolbar />}
+      <ContentWrapper isLoading={isLoading}>
+      {isToolbarVisible && <Toolbar />}
+         <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible}/>
+
         <Header />
         <About/>
         <Cookies setIsAgree={setIsAgree}  isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />

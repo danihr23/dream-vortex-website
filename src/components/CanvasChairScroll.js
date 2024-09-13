@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect,forwardRef } from 'react';
 import styled from 'styled-components/macro';
 
 function getCurrentFrame(index) {
@@ -7,7 +7,7 @@ function getCurrentFrame(index) {
 
 const frameCount = 490;
 //const { innerWidth: width, innerHeight: height } = window;
-const CanvasChairScroll = () => {
+const CanvasChairScroll = ({setIsToolbarVisible})=>{
   const canvasRef = useRef(null);
   const imagesRef = useRef([]);
   const heroSequenceRef = useRef(null);
@@ -61,6 +61,12 @@ const CanvasChairScroll = () => {
         0,
         Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount))
       );
+
+      if(frameIndex >=477 ){
+        setIsToolbarVisible(true)
+      }else{
+        setIsToolbarVisible(false)
+      }
 
       drawImage(frameIndex);
     };
