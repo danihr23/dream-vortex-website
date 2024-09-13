@@ -19,16 +19,7 @@ const Wrapper= styled.div`
   place-items: center;
   background: rgba(20, 23, 23, 1);
   padding:53px 0 40px 0 ;
-  &::before{
-    content: "";
-    width: 100%;
-    height: 220px;
-    position: absolute;
-    top: 0px;
-    z-index: 6;
-    margin-top: -139px;
-    background: linear-gradient(180deg, rgb(20 23 23) 0%, rgb(20 23 23) 74%, rgba(5, 180, 178, 0) 100%);
-  }
+ 
 
 `;
 

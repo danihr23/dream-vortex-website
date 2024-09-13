@@ -3,8 +3,6 @@ import styled from 'styled-components/macro';
 
 
 const PrivacyPolicy = ({ openPrivacyModal }) => {
-
-    console.log(333, openPrivacyModal)
     return (
         <Wrapper openPrivacyModal={openPrivacyModal}>
             <Title id={"sectionOne"}>PRIVACY POLICY</Title>
@@ -47,18 +45,44 @@ const PrivacyPolicy = ({ openPrivacyModal }) => {
                 <TextTitle>How we use and share information
                 </TextTitle>
                 <Text>As a general matter, we use your information to provide the services, experiences, merchandise, or information you request. We also may use your information for the following purposes:</Text>
-                <Text>- For our legitimate interests, consistent with your rights and preferences, we use personal data;
+                <Text>
+                    <br />
+                    - For our legitimate interests, consistent with your rights and preferences, we use personal data;
+
+                    <br />
                     - To communicate with you, respond to your requests, or provide you with updates and information;
+
+                    <br />
                     - To better understand our users, their interests, and their preferences;
+
+                    <br />
                     - To personalize your experience, save your preferences, authenticate our users, and provide similar user-experience features;
+
+                    <br />
                     - To develop, deliver, and improve our products, services, and other offerings, some of which may be offered in partnership with other parties;
+
+                    <br />
                     - To manage and customize advertisements or promotional offers;
+
+                    <br />
                     - For security purposes;
+
+                    <br />
                     - For internal purposes such as auditing and data analysis;
+
+                    <br />
                     - To provide services that are subject to terms you have accepted, such as enforcing our licenses, agreements, and terms of service, which may include reasonable monitoring to detect and prevent misuse or fraud and to keep our games fair for all users.
+
+                    <br />
                     - To the extent, you give consent, such as when we would like to process your personal information for a purpose that would otherwise be incompatible with this policy.
+
+                    <br />
+
                     - To comply with legal obligations.
+
+                    <br />
                     - We store personal information for as long as we reasonably need it to fulfill the purposes for which it was collected. For example, if you register for our services and create an account, we will store your information for as long as needed to maintain your account, provide the services you requested, enforce any applicable terms that govern your use of the services, and maintain appropriate records to reflect our delivery of services to you. We periodically review the personal information we retain to determine whether continued storage is proper. We may share or provide you with opportunities to share, information about you with other users of our websites, games, game engines, and applications as described in this policy. We also provide services that allow our users to communicate with "Dream Vortex" JSC and each other, in which case personal information may be shared and account IDs may be displayed.
+
                 </Text>
                 <Text>We may share personal information we collect with service providers that perform services on our behalf and under our instructions. These service providers are not authorized by us to use or disclose the information except as necessary to perform services on our behalf or comply with legal requirements. We also may share certain limited information, such as device identifiers, with advertisers and other marketing partners for purposes of gauging the effectiveness of advertising and other marketing strategies.</Text>
                 <Text>We may share information about you with your social network contacts when you and they use the same social features of our software and application</Text>
@@ -68,11 +92,22 @@ const PrivacyPolicy = ({ openPrivacyModal }) => {
                 <Text>We generally only ask you for personal information that is necessary to provide the services you request. You can choose not to give us the personal information we request, as described in the “Information you voluntarily choose to provide” section of this policy. However, in some cases, if you decide not to provide the personal information we request, we will not be able to provide the product, application, service, information, or features you requeste</Text>
                 <TextTitle>Other examples of your choices include:
                 </TextTitle>
-                <Text>- You can browse our website without providing any personal information. We may collect some limited information automatically, as described above.
+                <Text>
+                    <br />
+                    - You can browse our website without providing any personal information. We may collect some limited information automatically, as described above.
+
+                    <br />
                     - You may opt-out of receiving our messages at any time by using the opt-out mechanism provided in the message.
+                    <br />
                     - You can change your privacy settings on other parties’ websites, such as social networks, which will stop or limit our receipt of information from those other websites. You also may choose not to use social features we make available. If you choose to use these features, you should refrain from posting personal information that will be visible to others, such as including your email address in a forum or during a chat.
+
+                    <br />
                     - You may change your browser settings or take other steps to block, manage, or delete cookies. Not all of our websites and online services currently respond to browser “do not track” signals, so you will need to use your browser settings to effectively manage cookies. In some cases, blocking or disabling cookies may cause our websites, games, and applications not to work as intended and some features may not be available.
-                    - You may also exercise and amend your choices by sending an email to us as detailed in the “How to contact us” section below</Text>
+
+                    <br />
+                    - You may also exercise and amend your choices by sending an email to us as detailed in the “How to contact us” section below
+
+                </Text>
                 <TextTitle>Access and correction
                 </TextTitle>
                 <Text>We provide you with the ability to request access to and correction of your personal information. You can update your account information at any time through our website. If you would like to request access to or correction of your personal information, please submit your request by sending an email to the address specified in the “How to contact us” section below. Please include your name, email address, and postal address in your request, and describe specifically the information that you would like to access or correct so that we may respond appropriately and promptly.
@@ -97,12 +132,12 @@ const PrivacyPolicy = ({ openPrivacyModal }) => {
                 </Text>
                 <Text>Individuals located in the EU or whose personal information is processed by "Dream Vortex" JSC in the EU also have the right to obtain their personal information so they can transfer it to another party, or ask us to do so on their behalf, which we will do when technically feasible. This right is limited and only arises when our processing of your information is automated and based on your consent or our user agreements and/or terms and conditions. To exercise this right, please submit your request by sending an email to the address specified in the “How to contact us” section below. To the extent EU data protection law is applicable to you, you have the right to establish instructions in respect of the preservation, deletion, and transmission of your personal data after your death. To exercise this right, please submit your request by sending an email to the address specified in the “How to contact us” section below.</Text>
                 <Text>
-                    "Dream Vortex" JSC has appointed a data protection officer to address questions and requests related to our implementation of EU data protection requirements. Individuals located in the EU can contact our data protection officer with any questions or concerns about how we process their personal information via email at info@dreamvortex.com. Individuals located in the EU also have the right to lodge a complaint with a supervisory authority established in their country.</Text>
+                    "Dream Vortex" JSC has appointed a data protection officer to address questions and requests related to our implementation of EU data protection requirements. Individuals located in the EU can contact our data protection officer with any questions or concerns about how we process their personal information via email at <a href='info@dreamvortex.com' style={{ color: '#00BFBC' }}>info@dreamvortex.com</a>. Individuals located in the EU also have the right to lodge a complaint with a supervisory authority established in their country.</Text>
                 <TextTitle>Updates to Our Privacy Policy</TextTitle>
                 <Text>This policy may be updated periodically to reflect changes in our personal information practices or relevant laws. We will indicate at the top of this policy when this policy was last updated. Please review this policy every time you access or use our websites, software, or applications to make sure that you have reviewed the most recent version.</Text>
                 <TextTitle>How to contact us
                 </TextTitle>
-                <Text>If you have any questions or comments about this policy, if you need to report a problem, or if you would like to exercise one of your rights under this policy, please contact our support team via info@dreamvortex.com.
+                <Text>If you have any questions or comments about this policy, if you need to report a problem, or if you would like to exercise one of your rights under this policy, please contact our support team via <a href='info@dreamvortex.com' style={{ color: '#00BFBC' }}>info@dreamvortex.com</a>.
                 </Text>
                 <Text>Please include your name, contact information, and the nature of your request so that we can respond appropriately and promptly to your communication.</Text>
 

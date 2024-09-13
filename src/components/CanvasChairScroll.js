@@ -56,7 +56,7 @@ const CanvasChairScroll = () => {
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop - heroSequenceRef.current.offsetTop;
       const maxScrollTop = heroSequenceRef.current.scrollHeight - window.innerHeight;
-      const scrollFraction = (scrollTop / maxScrollTop);
+      const scrollFraction = (scrollTop / (maxScrollTop/1.1));
       const frameIndex = Math.max(
         0,
         Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount))
@@ -94,7 +94,7 @@ const HeroSequenceWrapper = styled.div`
 
 const StickyElement = styled.div`
   position: sticky;
-  z-index:7 ;
+  z-index:2 ;
   top: 0;
   height: 120vh;
   overflow: hidden;

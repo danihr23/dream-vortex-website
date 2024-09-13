@@ -59,7 +59,7 @@ const Footer = ({ onClickPrivacy }) => {
             </LogosWrapper>
             <TextSection>
                 <LeftSideText>
-                    <a href='#sectionOne'>
+                    <a href='#sectionOne' style={{ textDecoration: "none" }}>
                         <Text onClick={onClickPrivacy}>Privacy Policy</Text>
                     </a>
                     <IconWrapper>

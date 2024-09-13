@@ -1,5 +1,5 @@
 
-import React,{useCallback,useState,useEffect} from 'react';
+import React,{useCallback,useState,useEffect,useRef} from 'react';
 import styled from 'styled-components/macro';
 import IntroScreen from './components/IntroScreen';
 import CanvasChairScroll from './components/CanvasChairScroll';
@@ -11,6 +11,7 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Cookies from './components/Cookies';
 import Toolbar from './components/Toolbar';
+import Test from './components/Test';
 
 
 
@@ -19,12 +20,24 @@ function App() {
   const [isLoading,setIsLoading] = useState(true)
   const [isAgree, setIsAgree] = useState(false);
   const [isFooterPriveceClicked, setIsFooterPriveceClicked] = useState(false);
+  const [isToolbarVisible, setIsToolbarVisible] = useState(true);
+  const canvasPositonRef = useRef(null);
+
+
+  const handleScroll = () => {
+    if (canvasPositonRef.current) {
+      const canvasPosition = canvasPositonRef.current.getBoundingClientRect();
+      const isHeaderVisible = canvasPosition.top <= window.innerHeight && canvasPosition.bottom >= 0;
+      setIsToolbarVisible(!isHeaderVisible); 
+    }
+  };
 
   const onPrivacyClick = useCallback(()=>{
-    if(!isAgree)  return;  
      setIsAgree(false)
      setIsFooterPriveceClicked(true)
   },[])
+
+
   useEffect(()=>{
   const fakeDataFetch =()=>{
     setTimeout(()=>{
@@ -33,24 +46,33 @@ function App() {
   }
 
   fakeDataFetch();
+
+  window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   },[])
-  
+
+
   return (
     <Wrapper >
      {isLoading && (
        <IntroScreen/>
       ) }
-       <WrapperCanvas isLoading={isLoading}>
-        <Toolbar/>
-        <CanvasChairScroll/>
-        <Header/>
+       <ContentWrapper isLoading={isLoading}>
+        <WrapperCanvas ref={canvasPositonRef}>
+         <CanvasChairScroll/>
+        </WrapperCanvas>
+        {isToolbarVisible && <Toolbar />}
+        <Header />
         <About/>
         <Cookies setIsAgree={setIsAgree}  isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />
         <Projects/>
         <Team/>
         <ContactForm/>
         <Footer onClickPrivacy={onPrivacyClick}/> 
-      </WrapperCanvas>
+      </ContentWrapper>
     </Wrapper>
   );
 }
@@ -62,7 +84,10 @@ const Wrapper =styled.div`
   height: 100%;
 `;
 
-const WrapperCanvas = styled.div`
+const ContentWrapper = styled.div`
   display: ${props => props.isLoading && 'none' };
 `;
 
+const WrapperCanvas = styled.div`
+ width:100%
+`;
