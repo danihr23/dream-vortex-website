@@ -1,11 +1,11 @@
-import React, { useRef, useEffect,forwardRef } from 'react';
+import React, { useRef, useEffect, } from 'react';
 import styled from 'styled-components/macro';
 
 function getCurrentFrame(index) {
-    return `/assets/chairImg_new/${index.toString().padStart(4, '0')}.jpg`;
+    return `/assets/new/ezgif-frame-${index}.webp`;
 }
 
-const frameCount = 490;
+const frameCount = 656;
 //const { innerWidth: width, innerHeight: height } = window;
 const CanvasChairScroll = ({setIsToolbarVisible})=>{
   const canvasRef = useRef(null);
@@ -62,7 +62,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount))
       );
 
-      if(frameIndex >=477 ){
+      if(frameIndex >=647 ){
         setIsToolbarVisible(true)
       }else{
         setIsToolbarVisible(false)
@@ -80,7 +80,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
       <HeroSequenceWrapper ref={heroSequenceRef}>
         <StickyElement>
           <SequenceElement>
-            <Canvas ref={canvasRef} width="1336" height="786" />
+            <Canvas ref={canvasRef} width="1920" height="1080" />
           </SequenceElement>
         </StickyElement>
       </HeroSequenceWrapper>
@@ -95,32 +95,32 @@ export default CanvasChairScroll;
 // Styled Components
 const HeroSequenceWrapper = styled.div`
 
-  height: 530vh;
+  height: 730vh;
 `;
 
 const StickyElement = styled.div`
   position: sticky;
   z-index:2 ;
   top: 0;
-  height: 120vh;
+  height: 100vh;
+  width: auto;
   overflow: hidden;
   display: grid;
   place-items: center;
   background: #262726;
-
+  
 `;
 
 const SequenceElement = styled.div`
   width: 100%;
- height: auto;
- aspect-ratio: 16 / 9;
-
+ height: auto; 
+aspect-ratio:  683 / 384;
 `;
 
 const Canvas = styled.canvas`
   width: 100%;
   height: 100%;
-  aspect-ratio: 16 / 9;
+  
  
 `;
 
