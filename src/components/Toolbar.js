@@ -56,7 +56,11 @@ background-size: 100% auto;
     font-size: 40px;
   }
 
-
+  @media (max-width: 990px) { 
+    font-size:32px;   
+    width:120px ;
+   height:40px ;
+}
 `;
 
 const Contact = styled.div`
@@ -71,10 +75,17 @@ box-sizing: border-box;
   font-size: 28px;
   color: #fff;
   background: rgba(30, 30, 30, 0.58);
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   &:hover {
     background-color:rgba(30, 30, 30, 1);
   }
+
+  @media (max-width: 990px) { 
+    font-size:22px;   
+    width:120px ;
+    height:40px ;
+    padding-top: 6px;
+}
 `;
 

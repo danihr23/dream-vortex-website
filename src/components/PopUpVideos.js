@@ -179,7 +179,10 @@ const PopUpInfoWrapper = styled.div`
     z-index: 2;
     height: auto;
     backdrop-filter: blur(5px);
-
+    
+    @media (max-width: 990px) { 
+        padding: 30px;   
+}
 `;
 const ContentWrapper = styled.div`
 display: grid;
@@ -206,6 +209,9 @@ const Title = styled.h2`
   @media (max-width: 1500px) {
     font-size: 30px;
   }
+  @media (max-width: 990px) { 
+    font-size:24px;   
+}
 `;
 
 const Text = styled.p`
@@ -218,6 +224,9 @@ const Text = styled.p`
   @media (max-width: 1500px) {
     font-size: 21px;
   }
+  @media (max-width: 990px) { 
+    font-size:18px;   
+}
 `;
 
 const Video = styled.video`
@@ -246,7 +255,10 @@ const Arrow = styled.div`
   background: url(${(props) => props.background}) no-repeat center center;
   opacity: ${(props) => props.disabled ? 0.5 : 1};
   background-size: 100% auto;
-
+  @media (max-width: 990px) { 
+    width: 40px;
+    height: 40px;   
+}
 
 `;
 const ArrowWrapper = styled.div`
@@ -272,6 +284,10 @@ right:0 ;
   background: url(${closeTag}) no-repeat center center;
   opacity: ${(props) => props.disabled ? 1 : 0.5};
   background-size: 100% auto;
-
+  
+  @media (max-width: 990px) { 
+    width: 30px;
+    height: 30px;   
+}
 
 `;

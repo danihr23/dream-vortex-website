@@ -157,6 +157,13 @@ const Wrapper = styled.div`
   display: ${props => !props.openPrivacyModal && 'none'};
  background: rgba(20, 23, 23, 1);
   padding: 167px 140px 80px 140px;
+
+  @media (max-width: 990px) { 
+    padding: 124px 15px 62px; 
+}
+@media (max-width: 770px) { 
+    padding: 65px 0px 40px;  
+}
 `;
 
 const TextWrapper = styled.div`
@@ -176,6 +183,9 @@ font-weight: 400;
 @media (max-width: 1500px) { 
     font-size:80px;   
 }
+@media (max-width: 990px) { 
+    font-size:60px;   
+}
 
 `;
 
@@ -186,6 +196,10 @@ font-size:24px ;
 margin-top:20px ;
 @media (max-width: 1500px) { 
     font-size:20px;   
+}
+
+@media (max-width: 990px) { 
+    font-size:18px;   
 }
 `;
 
@@ -200,6 +214,9 @@ margin-top:20px;
 @media (max-width: 1500px) { 
     font-size:20px;
    
+}
+@media (max-width: 990px) { 
+    font-size:16px;   
 }
 `;
 

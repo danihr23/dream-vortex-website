@@ -114,13 +114,21 @@ justify-content: center;
 align-items:center ;
 gap: 39px;
 margin: 0 auto;
+@media (max-width: 990px) { 
+    padding: 25px; 
+}
 `;
 
 const Logo = styled.img`
 height: 100%;
 width: auto;
+
 @media (max-width: 1500px) { 
 height:50% ;
+}
+
+@media (max-width: 990px) { 
+    height:20% ;  
 }
 `;
 
@@ -131,6 +139,10 @@ color:#00BFBC;
 
 @media (max-width: 1500px) { 
     font-size:20px;   
+}
+
+@media (max-width: 990px) { 
+    font-size:18px;   
 }
 `;
 const IconWrapper = styled.h4`
@@ -165,6 +177,10 @@ min-width: auto;
     font-size:20px;
    
 }
+@media (max-width: 990px) { 
+    font-size:14px; 
+    
+}
 `;
 
 const Icon = styled.div`
@@ -179,8 +195,8 @@ border-radius:50% ;
     background: linear-gradient(0deg, rgba(5,180,178,0.4) 0%, rgba(5,180,178,0.4) 100%) ,url(${(props) => props.background}) no-repeat center center  ;
     background-size: 100% 100% ,100% auto;
 }
-@media (max-width: 1500px) { 
-
-   
+@media (max-width: 990px) { 
+    width:30px;
+height:30px; 
 }
 `;

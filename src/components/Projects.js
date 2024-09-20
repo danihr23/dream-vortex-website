@@ -88,6 +88,9 @@ const Wrapper = styled.div`
   padding:80px 0 212px 80px;
   background:#07121A;
 
+  @media (max-width: 990px) { 
+    padding: 80px 0px 113px 80px; 
+}
 `;
 
 const SwiperWrapper = styled.div`
@@ -105,6 +108,10 @@ const Title = styled.h2`
   @media (max-width: 1500px) {
     font-size: 80px;
   }
+
+  @media (max-width: 990px) { 
+    font-size:60px;   
+}
 `;
 
 const Text = styled.h4
@@ -114,6 +121,10 @@ font-size:22px ;
 margin-top:25px;
 @media (max-width: 1500px) { 
     font-size:20px;   
+}
+
+@media (max-width: 990px) { 
+    font-size:18px;   
 }
 `
 ;

@@ -89,7 +89,11 @@ position: relative;
  font-family: "Lato", sans-serif;
   height: auto;
   padding: 80px 160px;
-  min-height:583px ;
+  min-height:583px;
+
+  @media (max-width: 990px) { 
+    padding: 40px 60px; 
+}
 `;
 
 const Title = styled.h2`
@@ -105,6 +109,9 @@ font-size:100px ;
 
 @media (max-width: 1500px) { 
     font-size:80px;   
+}
+@media (max-width: 990px) { 
+    font-size:60px;   
 }
 
 `;
@@ -140,6 +147,9 @@ min-width: auto;
     font-size:22px;
    
 }
+@media (max-width: 990px) { 
+    font-size:16px;   
+}
 `;
 
 const TextTitle = styled.h3`
@@ -148,6 +158,9 @@ font-size:32px ;
 
 @media (max-width: 1500px) { 
     font-size:28px;   
+}
+@media (max-width: 990px) { 
+    font-size:20px;   
 }
 `;
 const FormContainer = styled.form`

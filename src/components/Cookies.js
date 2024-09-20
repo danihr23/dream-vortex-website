@@ -55,6 +55,12 @@ font-family: "Lato", sans-serif;
     font-size: 40px;
   }
 
+  @media (max-width: 1500px) { 
+    font-size: 20px;   
+}
+@media (max-width: 990px) { 
+    font-size:14px;   
+}
 
 `;
 
@@ -71,6 +77,17 @@ const SubmitButton = styled.button`
   &:hover {
     background-color: #007bff;;
   }
+
+  @media (max-width: 1500px) { 
+    width:180px;
+  height: 40px;
+}
+@media (max-width: 990px) { 
+  width:120px;
+  height: 30px;
+  font-size: 0.6em;
+  padding: 6px 20px;
+}
 `;
 
 const SpanLink = styled.span`

@@ -19,8 +19,6 @@ const Wrapper= styled.div`
   place-items: center;
   background: rgba(20, 23, 23, 1);
   padding:53px 0 40px 0 ;
- 
-
 `;
 
 const Title= styled.h1`
@@ -30,7 +28,9 @@ font-family: "Yrsa", serif;
 @media (max-width: 1500px) {
     font-size: 40px;
   }
-
+  @media (max-width: 990px) { 
+    font-size:32px;   
+}
 
 `;
 
@@ -43,4 +43,7 @@ margin-top:50px;
 @media (max-width: 1500px) {
     font-size: 24px;
   }
+  @media (max-width: 990px) { 
+    font-size:20px;   
+}
 `;

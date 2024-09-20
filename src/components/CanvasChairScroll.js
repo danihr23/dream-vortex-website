@@ -108,7 +108,10 @@ const StickyElement = styled.div`
   display: grid;
   place-items: center;
   background: #262726;
-  
+
+  @media (min-width: 1500px) {
+    height: 110vh;
+  }
 `;
 
 const SequenceElement = styled.div`

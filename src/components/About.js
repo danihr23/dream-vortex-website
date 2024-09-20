@@ -24,9 +24,15 @@ const Wrapper = styled.div`
 position: relative;
  font-family: "Lato", sans-serif;
   height: auto;
+      
   background: url(${bgr} ) right center no-repeat;
   background-size: cover;
   padding: 80px 80px 280px 80px;
+
+
+@media (max-width: 990px) { 
+padding:80px;
+}
 `;
 
 const TextWrapper = styled.div`
@@ -39,6 +45,7 @@ flex-direction: column;
 align-content: center;
 justify-content: center;
 gap: 19px;
+
 
 `;
 
@@ -55,6 +62,10 @@ font-size:100px ;
     font-size:80px;   
 }
 
+@media (max-width: 1120px) { 
+    font-size:60px;   
+}
+
 `;
 
 const TextTitle = styled.h3`
@@ -64,6 +75,12 @@ font-size:48px ;
 @media (max-width: 1500px) { 
     font-size:36px;   
 }
+@media (max-width: 1120px) { 
+    font-size:24px;   
+}
+@media (max-width: 770px) { 
+    font-size:18px;   
+}
 `;
 const TextExperience = styled.h4`
 color:#00BFBC;
@@ -72,6 +89,13 @@ font-size:32px ;
 
 @media (max-width: 1500px) { 
     font-size:24px;   
+}
+
+@media (max-width: 1120px) { 
+    font-size:18px;   
+}
+@media (max-width: 770px) { 
+    font-size:14px;   
 }
 
 `;
@@ -85,9 +109,15 @@ color:#fff;
 max-width: 50ch;
 min-width: auto;
 @media (max-width: 1500px) { 
-    max-width: 50ch;
     font-size:20px;
    
+}
+@media (max-width: 1120px) { 
+    font-size:14px;   
+}
+
+@media (max-width: 770px) { 
+    font-size:12px;   
 }
 `;
 
@@ -106,5 +136,15 @@ background-size: cover;
     width:700px;
     height:700px;
    
+}
+@media (max-width: 1120px) { 
+    margin-top: -150px;
+    width:400px;
+    height:400px;  
+}
+@media (max-width: 770px) { 
+    margin-top: -80px;
+    width:280px;
+    height:280px;    
 }
 `;
