@@ -91,6 +91,9 @@ const Wrapper = styled.div`
   @media (max-width: 990px) { 
     padding: 80px 0px 113px 80px; 
 }
+@media screen and (orientation: portrait) {
+  background-color:  red;
+}
 `;
 
 const SwiperWrapper = styled.div`
@@ -112,6 +115,8 @@ const Title = styled.h2`
   @media (max-width: 990px) { 
     font-size:60px;   
 }
+
+
 `;
 
 const Text = styled.h4

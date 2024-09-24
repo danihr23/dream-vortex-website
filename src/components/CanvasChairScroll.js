@@ -40,14 +40,83 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
       ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-    //   if (frameIndex >= 75 && frameIndex <= 100) {
-    //     ctx.fillStyle = 'white';
-    //     ctx.font = 'bold 18px Arial';
-    //     ctx.textAlign = 'left';
-    //     ctx.fillText('Innovative Experience', 600, 100);
-    //     ctx.fillText('maikata si e ebalo', 600, 150);
-    //     ctx.fillText('maikata si e ebalo kucheto', 600, 200);
-    //   }
+      if (frameIndex >= 82 && frameIndex <= 97) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('High-end eco leather.', 1450, 230);
+        ctx.fillText('Handstitched and designed', 1450, 280);
+        ctx.fillText(' for ultimate comfort', 1450, 330);
+      }
+      if (frameIndex >= 184 && frameIndex <= 199) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('Programmable chroma ', 340, 370);
+        ctx.fillText('LED lights displaying over', 340, 420);
+        ctx.fillText('  16M colours', 340, 470);
+      }
+      if (frameIndex >= 287 && frameIndex <= 301) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('Made of Carbon fiber. ', 310, 390);
+        ctx.fillText('Durable, lightweight and', 310, 440);
+        ctx.fillText('scratch-resistant', 310, 490);
+      }
+      if (frameIndex >= 364 && frameIndex <= 377) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('Dual motors enabling  ', 430, 660);
+        ctx.fillText('360° horizontal rotation', 430, 710);
+        ctx.fillText('and up to 90° vertical tilt', 430, 760);
+      }
+      if (frameIndex >= 481 && frameIndex <= 494) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('Solid casing with a built-', 1330, 730);
+        ctx.fillText('in cutting-edge computer', 1330, 780);
+        ctx.fillText('and cooling system', 1330, 830);
+      }
+
+      if (frameIndex >= 574 && frameIndex <= 587) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('Olfactory module for ', 880, 290);
+        ctx.fillText('immersive scent diffusion', 880, 340);
+      
+      }
+      if (frameIndex >= 642 && frameIndex <= 656) {
+        ctx.fillStyle = 'rgba(0, 191, 188, 1)';
+        ctx.font = 'italic 40px Lato';
+        ctx.textAlign = 'center';
+        ctx.fillText('Olfactory module for ', 1300, 250);
+        ctx.fillText('immersive scent diffusion', 1300, 300);
+
+        ctx.fillText('High-end eco leather.', 1385, 470);
+        ctx.fillText('Handstitched and designed', 1385, 520);
+        ctx.fillText(' for ultimate comfort', 1385, 570);
+
+        ctx.fillText('Solid casing with a built-', 1385, 770);
+        ctx.fillText('in cutting-edge computer', 1385, 820);
+        ctx.fillText('and cooling system', 1385, 870);
+
+        ctx.fillText('Made of Carbon fiber. ', 410, 230);
+        ctx.fillText('Durable, lightweight and', 410, 280);
+        ctx.fillText('scratch-resistant', 410, 330);
+
+        ctx.fillText('Programmable chroma ', 400, 470);
+        ctx.fillText('LED lights displaying over', 400, 520);
+        ctx.fillText('  16M colours', 400, 570);
+
+        ctx.fillText('Dual motors enabling  ', 380, 750);
+        ctx.fillText('360° horizontal rotation', 380, 800);
+        ctx.fillText('and up to 90° vertical tilt', 380, 850);
+      
+      }
     }
   };
 
