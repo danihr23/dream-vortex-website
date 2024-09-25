@@ -69,7 +69,10 @@ position: relative;
   background: url(${bgr} ) right center no-repeat;
   background-size: cover;
   padding: 80px;
+  @media screen and (orientation: portrait) {
+    padding: 40px 20px 65px 20px;
 
+}
 
 `;
 
@@ -85,9 +88,15 @@ justify-content: center;
 gap: 5px;
 
 @media (max-width: 600px) {
-       flex-direction:column;
-       gap: 20px;
+    flex-direction:column;
+    gap: 20px;
   }
+  @media screen and (orientation: portrait) {
+    font-size:40px; 
+    flex-direction:column;
+    gap: 20px;
+    padding-top:18px ;
+}
 
 `;
 
@@ -106,7 +115,10 @@ font-size:100px ;
 @media (max-width: 990px) { 
     font-size:60px;   
 }
+@media screen and (orientation: portrait) {
+    font-size:40px; 
 
+}
 `;
 
 const TextTitle = styled.h3`
@@ -118,6 +130,11 @@ font-size:32px ;
 }
 @media (max-width: 990px) { 
     font-size:18px;   
+}
+@media screen and (orientation: portrait) {
+    text-align:center ;
+    font-size:24px; 
+
 }
 `;
 
@@ -132,6 +149,12 @@ const InfoSection = styled.section`
     @media (max-width: 600px) {
       justify-content:flex-end;
   }
+  @media screen and (orientation: portrait) {
+    max-width: 760px;
+    margin-top: 20px;
+   
+
+}
 `;
 const Text = styled.p`
 margin-top:20px ;
@@ -145,6 +168,12 @@ min-width: auto;
 }
 @media (max-width: 990px) { 
     font-size:16px;   
+}
+@media screen and (orientation: portrait) {
+    font-size:16px; 
+    margin-bottom: 8px;
+
+
 }
 `;
 
@@ -172,6 +201,12 @@ const Container = styled.div`
     width:80px;
     height:80px;  
 }
+@media screen and (orientation: portrait) {
+    width:144px;
+    height:144px; 
+    margin-bottom: 7px;
+
+}
 `;
 const Picture = styled.div`
 position:relative ;
@@ -189,5 +224,10 @@ clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70
 @media (max-width: 990px) { 
     width:80px;
     height:80px;  
+}
+@media screen and (orientation: portrait) {
+    width:144px;
+    height:144px;  
+
 }
 `;

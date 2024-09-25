@@ -1,5 +1,5 @@
 
-import React, { useCallback, useState, useEffect, Fragment } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import styled from 'styled-components/macro';
 import IntroScreen from './components/IntroScreen';
 import CanvasChairScroll from './components/CanvasChairScroll';
@@ -11,7 +11,6 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Cookies from './components/Cookies';
 import Toolbar from './components/Toolbar';
-import Test from './components/Test';
 import useOrientation from './hooks/useOrientation';
 
 
@@ -49,12 +48,7 @@ function App() {
         <IntroScreen />
       )}
       <ContentWrapper isLoading={isLoading}>
-        {isPortrait ? (
-          <Fragment>
-            <Toolbar />
-            <Header />
-          </Fragment>
-        ) : isToolbarVisible && <Toolbar />}
+        { isToolbarVisible && <Toolbar />}
         <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible} />
         {!isPortrait && <Header />}
         <About />

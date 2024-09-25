@@ -62,8 +62,8 @@ const Projects = () => {
       <Title>PROJECTS</Title>
       <SwiperWrapper>
         <StyledSwiper
-          slidesPerView={3}
-          spaceBetween={50}
+          slidesPerView={1.4}
+          spaceBetween={20}
 
         >
           {projects.map((item,index) => (
@@ -92,7 +92,8 @@ const Wrapper = styled.div`
     padding: 80px 0px 113px 80px; 
 }
 @media screen and (orientation: portrait) {
-  background-color:  red;
+  padding:20px 0 80px 20px;
+
 }
 `;
 
@@ -116,7 +117,9 @@ const Title = styled.h2`
     font-size:60px;   
 }
 
-
+@media screen and (orientation: portrait) {
+  font-size:48px;
+}
 `;
 
 const Text = styled.h4
@@ -131,6 +134,12 @@ margin-top:25px;
 @media (max-width: 990px) { 
     font-size:18px;   
 }
+    @media screen and (orientation: portrait) {
+ font-size: 20px;
+  font-weight: 700;
+  max-width: 23ch;
+  text-align: center;
+}
 `
 ;
 
@@ -143,6 +152,10 @@ const Poster = styled.div`
   height:100% ;
   background: url(${(props) => props.background}) no-repeat center center;
   background-size: 100% auto;
+
+  @media screen and (orientation: portrait) {
+    background-size: auto 100%;
+}
 
 
 `;
@@ -157,6 +170,12 @@ const StyledSwiper = styled(Swiper)`
     justify-content: center;
     align-items: center;
     aspect-ratio:3/1.5;
+
+    @media screen and (orientation: portrait) {
+    
+      aspect-ratio:3/5;
+}
+
   }
 
   .swiper-pagination-bullet {

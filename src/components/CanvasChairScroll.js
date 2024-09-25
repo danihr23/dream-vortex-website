@@ -15,7 +15,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
   // Preload images
   useEffect(() => {
     const images = [];
-    for (let i = 1; i < frameCount; i++) {
+    for (let i = 1;i < frameCount; i++) {
       const img = new Image();
       img.src = getCurrentFrame(i);
       img.onload = () => {
@@ -178,8 +178,8 @@ const StickyElement = styled.div`
   place-items: center;
   background: #262726;
 
-  @media (min-width: 1500px) {
-    height: 110vh;
+  @media (min-width: 1200px) {
+    height: 115vh;
   }
 `;
 
@@ -192,7 +192,7 @@ aspect-ratio:  683 / 384;
 const Canvas = styled.canvas`
   width: 100%;
   height: 100%;
-  
+
  
 `;
 

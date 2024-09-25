@@ -90,9 +90,12 @@ position: relative;
   height: auto;
   padding: 80px 160px;
   min-height:583px;
-
   @media (max-width: 990px) { 
     padding: 40px 60px; 
+}
+@media screen and (orientation: portrait) {
+    
+  padding: 40px 40px 100px 40px;  
 }
 `;
 
@@ -113,6 +116,10 @@ font-size:100px ;
 @media (max-width: 990px) { 
     font-size:60px;   
 }
+@media screen and (orientation: portrait) {
+    font-size:40px; 
+
+}
 
 `;
 
@@ -124,6 +131,11 @@ const InfoSection = styled.section`
     flex-direction: column;
     align-items: flex-start;
     align-content: center;
+
+    @media screen and (orientation: portrait) {
+  align-items: center;
+
+}
    
 `;
 
@@ -133,7 +145,10 @@ const TextAndButtonSection = styled.section`
     flex-direction: column;
     align-items: flex-end;
     align-content: center;
-   
+    @media screen and (orientation: portrait) {
+    align-items:start ;
+
+}
 `;
 
 const Text = styled.p`
@@ -150,6 +165,11 @@ min-width: auto;
 @media (max-width: 990px) { 
     font-size:16px;   
 }
+@media screen and (orientation: portrait) {
+    font-size:16px; 
+    text-align:center ;
+
+}
 `;
 
 const TextTitle = styled.h3`
@@ -162,6 +182,11 @@ font-size:32px ;
 @media (max-width: 990px) { 
     font-size:20px;   
 }
+@media screen and (orientation: portrait) {
+    font-size:20px; 
+    text-align:center ;
+
+}
 `;
 const FormContainer = styled.form`
   display: grid;
@@ -172,6 +197,14 @@ const FormContainer = styled.form`
   width:100% ;
   justify-content:space-between ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @media screen and (orientation: portrait) {
+    font-size:20px; 
+    grid-template-columns:100%;
+    grid-template-rows: auto;
+    gap:17px ;
+
+}
+
 `;
 
 const FormGroup = styled.div`
