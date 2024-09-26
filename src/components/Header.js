@@ -1,5 +1,5 @@
 
-import styled from 'styled-components/macro';
+import styled,{keyframes} from 'styled-components/macro';
 
 
 const Header = () =>{
@@ -13,12 +13,29 @@ const Header = () =>{
 }
 
 export default Header;
+
+const appearToolbar= keyframes`
+
+to {
+  opacity: 1;
+}`;
+
 const Wrapper= styled.div`
-  font-weight: 700;
+position: absolute;
+top:40%;
+right:0 ;
+  font-weight: 600;
+  max-width: 600px;
   display: grid;
   place-items: center;
-  background: rgba(20, 23, 23, 1);
-  padding:53px 0 40px 0 ;
+  text-align:right ;
+  padding:53px  40px  ;
+  opacity:0 ;
+  animation-name: ${appearToolbar};
+      animation-delay:1000ms ;
+      animation-duration: 250ms;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards
 `;
 
 const Title= styled.h1`

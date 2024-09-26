@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Cookies from './components/Cookies';
 import Toolbar from './components/Toolbar';
 import useOrientation from './hooks/useOrientation';
+import ChairVideoComponent from './components/ChairVideoComponent';
 
 
 
@@ -22,12 +23,17 @@ function App() {
   const [isAgree, setIsAgree] = useState(false);
   const [isFooterPriveceClicked, setIsFooterPriveceClicked] = useState(false);
   const [isToolbarVisible, setIsToolbarVisible] = useState(false);
+  const [onScroll, setOnScroll] = useState(false);
+
 
   const onPrivacyClick = useCallback(() => {
     setIsAgree(false)
     setIsFooterPriveceClicked(true)
   }, [])
-
+  const handleScroll = () => {
+    setOnScroll(true)
+    console.log("dadas")
+  };
 
   useEffect(() => {
     const fakeDataFetch = () => {
@@ -37,7 +43,11 @@ function App() {
     }
 
     fakeDataFetch();
-
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [])
 
 
@@ -49,8 +59,8 @@ function App() {
       )}
       <ContentWrapper isLoading={isLoading}>
         { isToolbarVisible && <Toolbar />}
+        <ChairVideoComponent onScrollProp={onScroll}/>
         <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible} />
-        {!isPortrait && <Header />}
         <About />
         <Cookies setIsAgree={setIsAgree} isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />
         <Projects />

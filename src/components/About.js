@@ -187,9 +187,9 @@ background-size: cover;
 const MobileChairs = styled.div`
   width: 100%;
   height:150px ;
-  background: url(${mobile_chair_one}) left 5px center no-repeat,
+  background: url(${mobile_chair_one}) left 0 center no-repeat,
     url(${mobile_chair_two}) center center no-repeat,
-    url(${mobile_chair_three}) right 0 center no-repeat;
+    url(${mobile_chair_three}) right -10px center no-repeat;
   background-size: auto 100%, auto 100%, auto 100%;
   z-index: 1;
 

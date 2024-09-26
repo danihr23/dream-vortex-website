@@ -119,6 +119,7 @@ const PopUpVideos = ({ isOpen, projectNumber, setPopUpOpen }) => {
                                         autoPlay
                                         muted
                                         playsInline
+                                        
                                     >
                                         <source src={item.video} type="video/mp4" />
                                     </Video>
@@ -132,12 +133,12 @@ const PopUpVideos = ({ isOpen, projectNumber, setPopUpOpen }) => {
                                 </ContentWrapper>
                             </SwiperSlide>
                         ))}
+                    </StyledSwiper>
+                </SwiperWrapper>
                         <ArrowWrapper>
                             <Arrow onClick={handlePrev} disabled={isAtBeginning} background={arrowLeft} />
                             <Arrow onClick={handleNext} disabled={isAtEnd} background={arrowRight} />
                         </ArrowWrapper>
-                    </StyledSwiper>
-                </SwiperWrapper>
             </PopUpInfoWrapper>
         </Wrapper>
     );
@@ -160,6 +161,8 @@ left: 0;
     z-index: 5;
     box-sizing: border-box;
   display: ${(props) => !props.isOpen && 'none'}; ;
+
+
 `;
 
 
@@ -173,15 +176,19 @@ const PopUpInfoWrapper = styled.div`
     position: relative;
     border: 1px solid #666666; 
     border-radius: 6px;
-   width: 90%;
-   background: rgb(41 41 41 / 80%);
+    width:100%;
+    height: 100vh;
+     background: rgb(41 41 41 / 80%);
     padding: 40px;
     z-index: 2;
-    height: auto;
     backdrop-filter: blur(5px);
     
     @media (max-width: 990px) { 
         padding: 30px;   
+}
+@media screen and (orientation: portrait) {
+
+    padding:30px 0px ;
 }
 `;
 const ContentWrapper = styled.div`
@@ -200,6 +207,9 @@ display: grid;
 const TextWrapper = styled.div`
 
   color: #fff;
+  @media screen and (orientation: portrait) {
+ padding: 35px;
+}
 `;
 
 const Title = styled.h2`
@@ -211,6 +221,9 @@ const Title = styled.h2`
   }
   @media (max-width: 990px) { 
     font-size:24px;   
+}
+@media screen and (orientation: portrait) {
+    font-size:20px;  
 }
 `;
 
@@ -226,6 +239,9 @@ const Text = styled.p`
   }
   @media (max-width: 990px) { 
     font-size:18px;   
+}
+@media screen and (orientation: portrait) {
+    font-size: 16px;  
 }
 `;
 
@@ -262,15 +278,15 @@ const Arrow = styled.div`
 
 `;
 const ArrowWrapper = styled.div`
-    margin-top: 85px;
+position: absolute;
+bottom: 60px;
   width: 100% ; 
   height: 60px;
- gap: 25px;
+   gap: 25px;
   display:flex ;
   justify-content: center;
     align-content: center;
     align-items: center;
-
 
 `;
 
@@ -288,6 +304,9 @@ right:0 ;
   @media (max-width: 990px) { 
     width: 30px;
     height: 30px;   
+}    
+@media screen and (orientation: portrait) {
+    margin-top:0 ;
 }
 
 `;

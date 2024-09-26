@@ -199,7 +199,9 @@ const Container = styled.div`
   }
   @media (max-width: 990px) { 
     width:80px;
-    height:80px;  
+    height:80px; 
+    margin-bottom: 37px;
+
 }
 @media screen and (orientation: portrait) {
     width:144px;
@@ -210,24 +212,24 @@ const Container = styled.div`
 `;
 const Picture = styled.div`
 position:relative ;
-width:220px;
-height:220px;
+width:214px;
+height:214px;
 background: url(${(props) => props.background}) no-repeat center center;
 background-size: cover;
 clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 @media (max-width: 1500px) { 
 
-    width:150px;
-    height:150px;
+    width:144px;
+    height:144px;
    
 }
 @media (max-width: 990px) { 
-    width:80px;
-    height:80px;  
+    width:74px;
+    height:74px;  
 }
 @media screen and (orientation: portrait) {
-    width:144px;
-    height:144px;  
+    width: 138px;
+    height: 138px; 
 
 }
 `;

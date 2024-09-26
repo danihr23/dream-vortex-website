@@ -41,7 +41,10 @@ width:100% ;
     overflow-y: scroll;
 
 
+  @media screen and (orientation: portrait) {
 
+padding: 9px 22px ;
+}
 `;
 
 const Title = styled.p`
@@ -60,6 +63,11 @@ font-family: "Lato", sans-serif;
 }
 @media (max-width: 990px) { 
     font-size:14px;   
+}
+@media screen and (orientation: portrait) {
+
+  font-size:12px; 
+  line-height:15px ;
 }
 
 `;
@@ -88,6 +96,11 @@ const SubmitButton = styled.button`
   font-size: 0.6em;
   padding: 6px 20px;
 }
+@media screen and (orientation: portrait) {
+
+font-size:0.8rem; 
+
+}
 `;
 
 const SpanLink = styled.span`
@@ -100,6 +113,10 @@ width:100%;
 display:flex;
 place-items: center;
 justify-content: space-between;
+
+@media screen and (orientation: portrait) {
+    flex-direction:column ;
+}
 
 
 `;

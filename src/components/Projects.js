@@ -124,6 +124,7 @@ const Title = styled.h2`
 
 const Text = styled.h4
 `color:#fff;
+font-family: 'Lato', sans-serif;
 font-weight: 400;
 font-size:22px ;
 margin-top:25px;
@@ -135,7 +136,7 @@ margin-top:25px;
     font-size:18px;   
 }
     @media screen and (orientation: portrait) {
- font-size: 20px;
+   font-size: 20px;
   font-weight: 700;
   max-width: 23ch;
   text-align: center;
