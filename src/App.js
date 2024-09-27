@@ -3,7 +3,6 @@ import React, { useCallback, useState, useEffect } from 'react';
 import styled from 'styled-components/macro';
 import IntroScreen from './components/IntroScreen';
 import CanvasChairScroll from './components/CanvasChairScroll';
-import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
 import Team from './components/Team';
@@ -13,6 +12,7 @@ import Cookies from './components/Cookies';
 import Toolbar from './components/Toolbar';
 import useOrientation from './hooks/useOrientation';
 import ChairVideoComponent from './components/ChairVideoComponent';
+import CanvasChairScrollMobile from './components/CanvasChairScrollMobile';
 
 
 
@@ -32,7 +32,6 @@ function App() {
   }, [])
   const handleScroll = () => {
     setOnScroll(true)
-    console.log("dadas")
   };
 
   useEffect(() => {
@@ -60,7 +59,7 @@ function App() {
       <ContentWrapper isLoading={isLoading}>
         { isToolbarVisible && <Toolbar />}
         <ChairVideoComponent onScrollProp={onScroll}/>
-        <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible} />
+        { isPortrait ? <CanvasChairScrollMobile setIsToolbarVisible={setIsToolbarVisible} /> : <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible} />}   
         <About />
         <Cookies setIsAgree={setIsAgree} isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />
         <Projects />
@@ -83,6 +82,3 @@ const ContentWrapper = styled.div`
   display: ${props => props.isLoading && 'none'};
 `;
 
-const WrapperCanvas = styled.div`
- width:100%
-`;

@@ -10,7 +10,6 @@ const ChairVideoComponent = ({onScrollProp}) => {
                 autoPlay
                 muted
                 playsInline
-
             >
                 <source src={video} type="video/mp4" />
             </Video>

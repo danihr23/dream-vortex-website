@@ -5,7 +5,7 @@ import intro from '../asets/intro.gif'
 const IntroScreen = () =>{
     return(
         <>
-            <ImageWrapper/>
+            <ImageWrapper />
         </>
     )
 }
