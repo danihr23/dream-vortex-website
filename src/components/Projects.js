@@ -7,7 +7,7 @@ import machu from '../asets/machuPicchu.png';
 import NeuroTwo from '../asets/NeuroPodTwo.png';
 import NeuroOne from '../asets/NeuroPodOne.png';
 
-
+import useOrientation from '../hooks/useOrientation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper styles
 import 'swiper/css/pagination'; // Import additional styles if needed
@@ -49,6 +49,8 @@ const projects = [
 
 const Projects = () => {
 
+  const isPortrait = useOrientation();
+
     const [projectNumber, setProjectNumber] = useState(0);
     const [popUpOpen, setPopUpOpen] = useState(false);
 
@@ -62,8 +64,8 @@ const Projects = () => {
       <Title>PROJECTS</Title>
       <SwiperWrapper>
         <StyledSwiper
-          slidesPerView={1.4}
-          spaceBetween={20}
+          slidesPerView={isPortrait ?  1.4 : 2.7}
+          spaceBetween={isPortrait ? 20 : 50}
 
         >
           {projects.map((item,index) => (
@@ -152,10 +154,14 @@ const Poster = styled.div`
   width: 100%;
   height:100% ;
   background: url(${(props) => props.background}) no-repeat center center;
-  background-size: 100% auto;
-
+  background-size: 100% 100%;
+  aspect-ratio:3/1.5;
   @media screen and (orientation: portrait) {
     background-size: auto 100%;
+}
+    @media screen and (orientation: portrait) {
+    
+      aspect-ratio:3/5;
 }
 
 
@@ -170,12 +176,9 @@ const StyledSwiper = styled(Swiper)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio:3/1.5;
+ 
 
-    @media screen and (orientation: portrait) {
-    
-      aspect-ratio:3/5;
-}
+
 
   }
 

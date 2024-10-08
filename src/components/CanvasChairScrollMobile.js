@@ -40,94 +40,85 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
       ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
+      console.log(canvas.height)
+
       if (frameIndex >= 41 && frameIndex <= 78) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 40px Lato';
+        ctx.font = 'italic 20px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('High-end eco leather.',400, 1330);
-        ctx.fillText('Handstitched and designed', 400, 1380);
-        ctx.fillText(' for ultimate comfort', 400, 1430);
+        ctx.fillText('High-end eco leather.',200, canvas.height*0.79);
+        ctx.fillText('Handstitched and designed', 200, canvas.height*0.82);
+        ctx.fillText(' for ultimate comfort', 200,  canvas.height*0.85);
       }
       if (frameIndex >= 168 && frameIndex <= 204) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 40px Lato';
+        ctx.font = 'italic 20px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('Programmable chroma ', 400, 1330);
-        ctx.fillText('LED lights displaying over',  400, 1380);
-        ctx.fillText('  16M colours', 400, 1430);
+        ctx.fillText('Programmable chroma ', 200, canvas.height*0.79);
+        ctx.fillText('LED lights displaying over',  200, canvas.height*0.82);
+        ctx.fillText('  16M colours', 200, canvas.height*0.85);
       }
       if (frameIndex >= 260 && frameIndex <= 296) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 40px Lato';
+        ctx.font = 'italic 20px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('Made of Carbon fiber. ', 400, 1330);
-        ctx.fillText('Durable, lightweight and',  400, 1380);
-        ctx.fillText('scratch-resistant', 400, 1430);
+        ctx.fillText('Made of Carbon fiber. ', 200, canvas.height*0.79);
+        ctx.fillText('Durable, lightweight and',  200, canvas.height*0.82);
+        ctx.fillText('scratch-resistant', 200, canvas.height*0.85);
       }
       if (frameIndex >= 356 && frameIndex <= 392) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 40px Lato';
+        ctx.font = 'italic 20px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('Dual motors enabling  ', 400, 1330);
-        ctx.fillText('360° horizontal rotation',  400, 1380);
-        ctx.fillText('and up to 90° vertical tilt', 400, 1430);
+        ctx.fillText('Dual motors enabling  ', 200, canvas.height*0.79);
+        ctx.fillText('360° horizontal rotation',  200, canvas.height*0.82);
+        ctx.fillText('and up to 90° vertical tilt', 200, canvas.height*0.85);
       }
       if (frameIndex >= 474 && frameIndex <= 510) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 40px Lato';
+        ctx.font = 'italic 20px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('Solid casing with a built-', 400, 1330);
-        ctx.fillText('in cutting-edge computer',  400, 1380);
-        ctx.fillText('and cooling system', 400, 1430);
+        ctx.fillText('Solid casing with a built-', 200, canvas.height*0.79);
+        ctx.fillText('in cutting-edge computer',  200, canvas.height*0.82);
+        ctx.fillText('and cooling system', 200, canvas.height*0.85);
       }
 
       if (frameIndex >= 572 && frameIndex <= 609) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 40px Lato';
+        ctx.font = 'italic 20px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('Olfactory module for ', 400, 1360);
-        ctx.fillText('immersive scent diffusion',  400, 1410);
+        ctx.fillText('Olfactory module for ', 200, canvas.height*0.79);
+        ctx.fillText('immersive scent diffusion',  200, canvas.height*0.82);
       
       }
       if (frameIndex >= 695 && frameIndex <= 729) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
-        ctx.font = 'italic 30px Lato';
+        ctx.font = 'italic 15px Lato';
         ctx.textAlign = 'center';
-        ctx.fillText('Olfactory module for immersive scent diffusion', 340, 1230);
+        ctx.fillText('Olfactory module for immersive scent diffusion', canvas.width * 0.5, canvas.height*0.67);
        // ctx.fillText('immersive scent diffusion',  300, 1180);
 
-       ctx.fillText('Made of Carbon fiber. Durable, lightweight and', 340, 1280);
+       ctx.fillText('Made of Carbon fiber. Durable, lightweight and', canvas.width * 0.5, canvas.height*0.70);
        //ctx.fillText('Durable, lightweight and', 8400, 1950);
-       ctx.fillText('scratch-resistant', 200, 1310);
+       ctx.fillText('scratch-resistant', canvas.width * 0.26, canvas.height*0.72);
 
-       ctx.fillText('Programmable chroma LED lights displaying over ', 350, 1360);
+       ctx.fillText('Programmable chroma LED lights displaying over ', canvas.width * 0.5, canvas.height*0.75);
        //ctx.fillText('LED lights displaying over',8400, 2250);
-       ctx.fillText('  16M colours', 170, 1390);
+       ctx.fillText('  16M colours', canvas.width * 0.26, canvas.height*0.77);
 
 
-        ctx.fillText('High-end eco leather. Handstitched and designed', 340, 1440);
+        ctx.fillText('High-end eco leather. Handstitched and designed', canvas.width * 0.5, canvas.height*0.80);
        // ctx.fillText('Handstitched and designed', 8400, 1580);
-        ctx.fillText(' for ultimate comfort', 200, 1470);
+        ctx.fillText(' for ultimate comfort', canvas.width * 0.26, canvas.height*0.82);
 
-        ctx.fillText('Dual motors enabling 360° horizontal rotation ', 330, 1510);
+        ctx.fillText('Dual motors enabling 360° horizontal rotation ', canvas.width * 0.5, canvas.height*0.85);
         //ctx.fillText('360° horizontal rotation', 8400, 2550);
-        ctx.fillText('and up to 90° vertical tilt', 230, 1540);
+        ctx.fillText('and up to 90° vertical tilt', canvas.width * 0.36, canvas.height*0.87);
 
-        ctx.fillText('Solid casing with a built-in cutting-edge computer', 340, 1590 );
+        ctx.fillText('Solid casing with a built-in cutting-edge computer', canvas.width * 0.5, canvas.height*0.90 );
        // ctx.fillText('in cutting-edge computer',8400, 1750);
-        ctx.fillText('and cooling system',200, 1620);
+        ctx.fillText('and cooling system',canvas.width * 0.26, canvas.height*0.92);
 
-        // ctx.fillText('Made of Carbon fiber. Durable, lightweight and', 330, 1440);
-        // //ctx.fillText('Durable, lightweight and', 8400, 1950);
-        // ctx.fillText('scratch-resistant', 180, 1540);
-
-        // ctx.fillText('Programmable chroma LED lights displaying over ', 340, 1510);
-        // //ctx.fillText('LED lights displaying over',8400, 2250);
-        // ctx.fillText('  16M colours', 140, 1540);
-
-        // ctx.fillText('Dual motors enabling 360° horizontal rotation ', 330, 1590);
-        // //ctx.fillText('360° horizontal rotation', 8400, 2550);
-        // ctx.fillText('and up to 90° vertical tilt', 220, 1620);
       
       }
     }
@@ -155,6 +146,7 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -162,7 +154,7 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
       <HeroSequenceWrapper ref={heroSequenceRef}>
         <StickyElement>
           <SequenceElement>
-            <Canvas ref={canvasRef} width="780" height="1688" />
+            <Canvas ref={canvasRef} width="380" height={window.innerHeight} />
           </SequenceElement>
         </StickyElement>
       </HeroSequenceWrapper>

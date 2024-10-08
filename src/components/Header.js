@@ -2,10 +2,10 @@
 import styled,{keyframes} from 'styled-components/macro';
 
 
-const Header = () =>{
 
-    return(
-        <Wrapper>
+const Header = ({videoEnd}) =>{
+   return(
+        <Wrapper videoEnd={videoEnd}>
         <Title>Virtual Reality of a new generation</Title>
         <Text>One stop solution for immersive entertainment.</Text>
         </Wrapper>
@@ -31,11 +31,23 @@ right:0 ;
   text-align:right ;
   padding:53px  40px  ;
   opacity:0 ;
-  animation-name: ${appearToolbar};
-      animation-delay:1000ms ;
+
+  animation-name: ${(props)=> props.videoEnd && appearToolbar};
       animation-duration: 250ms;
       animation-iteration-count: 1;
-      animation-fill-mode: forwards
+      animation-fill-mode: forwards;
+
+ @media screen and (orientation: portrait) {
+
+  text-align:left;
+  top :unset ;
+  bottom:0;
+  padding:23px 30px 30px 30px;
+  transform: scale(var(--scale-coef))
+}
+
+      
+   
 `;
 
 const Title= styled.h1`
@@ -47,6 +59,10 @@ font-family: "Yrsa", serif;
   }
   @media (max-width: 990px) { 
     font-size:32px;   
+}
+@media screen and (orientation: portrait) {
+
+  font-size:28px;   
 }
 
 `;
@@ -62,5 +78,10 @@ margin-top:50px;
   }
   @media (max-width: 990px) { 
     font-size:20px;   
+}
+@media screen and (orientation: portrait) {
+
+font-size:18px;   
+margin-top:18px;
 }
 `;

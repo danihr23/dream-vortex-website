@@ -12,7 +12,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
   const imagesRef = useRef([]);
   const heroSequenceRef = useRef(null);
 
-  // Preload images
+ 
   useEffect(() => {
     const images = [];
     for (let i = 1;i < frameCount; i++) {
@@ -37,7 +37,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
     if (canvas && imagesRef.current[frameIndex]) {
       const ctx = canvas.getContext('2d');
       const image = imagesRef.current[frameIndex];
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+      ctx.clearRect(0, 0, canvas.width, canvas.height); 
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
       if (frameIndex >= 43 && frameIndex <= 57) {
@@ -142,6 +142,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

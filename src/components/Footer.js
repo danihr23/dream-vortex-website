@@ -52,7 +52,7 @@ const Footer = ({ onClickPrivacy }) => {
 
     return (
         <Wrapper>
-            <LogosWrapper id={'sectionTwo'}>
+            <LogosWrapper >
                 {logos.map((item, index) => (
                     <Logo key={index} src={item.logo} alt="logo" />
                 ))}
@@ -65,15 +65,15 @@ const Footer = ({ onClickPrivacy }) => {
                         </a>
                     </PrivacyDiv>
                     <IconWrapper>
-                        <a href='https://www.linkedin.com/' target="_blank">
+                        <a href='https://www.linkedin.com/' target=" _blank">
                             <Icon background={linktin} />
                         </a>
 
-                        <a href='https://www.facebook.com/' target="_blank">
+                        <a href='https://www.facebook.com/' target=" _blank">
                             <Icon background={fb} />
                         </a>
 
-                        <a href='https://www.instagram.com/' target="_blank">
+                        <a href='https://www.instagram.com/' target=" _blank">
                             <Icon background={insta} />
                         </a>
 

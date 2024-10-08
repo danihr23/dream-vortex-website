@@ -31,7 +31,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id={'sectionTwo'}>
     <Title>CONTACT US</Title>
     <InfoSection>
         <TextTitle>GET IN TOUCH</TextTitle>

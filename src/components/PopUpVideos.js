@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components/macro';
-import Olimpus from '../video/ZenArt_Gameplay.mp4';
-import Tcc from '../video/TCCC20sec.mp4';
-import Egypt from '../video/Kingramses_trailer.mp4';
-import Machu from '../video/MachuPicchu_Trailer.mp4';
-import NeuroPod from '../video/rehab.mp4';
+import Olimpus from '../videos/ZenArt_Gameplay.mp4';
+import Tcc from '../videos/TCCC20sec.mp4';
+import Egypt from '../videos/Kingramses_trailer.mp4';
+import Machu from '../videos/MachuPicchu_Trailer.mp4';
+import NeuroPod from '../videos/rehab.mp4';
 import arrowLeft from '../asets/arrow_left.png'
 import arrowRight from '../asets/arrow_right.png'
-import Belogradchik from '../video/ZenArt_Gameplay_02.mp4';
+import Belogradchik from '../videos/ZenArt_Gameplay_02.mp4';
 import closeTag from '../asets/close_btn.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -189,6 +189,8 @@ const PopUpInfoWrapper = styled.div`
 @media screen and (orientation: portrait) {
 
     padding:30px 0px ;
+    height: auto;
+
 }
 `;
 const ContentWrapper = styled.div`
@@ -288,6 +290,9 @@ bottom: 60px;
     align-content: center;
     align-items: center;
 
+    @media screen and (orientation: portrait) {
+        bottom: 0 ;
+}
 `;
 
 const CloseTag = styled.div`

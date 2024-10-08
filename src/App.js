@@ -58,7 +58,7 @@ function App() {
       )}
       <ContentWrapper isLoading={isLoading}>
         { isToolbarVisible && <Toolbar />}
-        <ChairVideoComponent onScrollProp={onScroll}/>
+        <ChairVideoComponent onScrollProp={onScroll}/>  
         { isPortrait ? <CanvasChairScrollMobile setIsToolbarVisible={setIsToolbarVisible} /> : <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible} />}   
         <About />
         <Cookies setIsAgree={setIsAgree} isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />
