@@ -9,14 +9,13 @@ import NeuroOne from '../asets/NeuroPodOne.png';
 
 import useOrientation from '../hooks/useOrientation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // Import Swiper styles
-import 'swiper/css/pagination'; // Import additional styles if needed
+import 'swiper/css'; 
+import 'swiper/css/pagination'; 
 import PopUpVideos from './PopUpVideos';
 
-// Mock projects array
 const projects = [
   {
-   // id: 1,
+ 
     poster: Egypt,
     title: 'Ramses & Nefertari: Journey to Osiris',
   },
@@ -26,22 +25,22 @@ const projects = [
     title: 'Tactical Combat Casualty Care',
   },
   {
-    //id: 3,
+
     poster: Zen,
     title: 'Zen Universe - Olympus: Home of the Gods',
   },
   {
-    //id: 4,
+
     poster: machu,
     title: 'Machu Picchu and the Spirit of the Condor',
   },
   {
-    //id: 5,
+
     poster: NeuroOne,
     title: 'NeuroPod Rehab VR',
   },
   {
-   // id: 6,
+  
     poster: NeuroTwo,
     title: 'NeuroPod Rehab VR',
   },

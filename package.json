@@ -25,6 +25,10 @@
       "react-app/jest"
     ]
   },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -37,4 +41,5 @@
       "last 1 safari version"
     ]
   }
+
 }

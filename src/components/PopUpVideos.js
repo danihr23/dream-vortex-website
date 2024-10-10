@@ -13,7 +13,7 @@ import closeTag from '../asets/close_btn.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
-// Mock projects array
+
 const projects = [
     {
         id: 1,

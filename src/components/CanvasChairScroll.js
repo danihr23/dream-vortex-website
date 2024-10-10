@@ -31,7 +31,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
     imagesRef.current = images;
   }, []);
 
-  // Draw the image on the canvas
+ 
   const drawImage = (frameIndex) => {
     const canvas = canvasRef.current;
     if (canvas && imagesRef.current[frameIndex]) {
@@ -120,7 +120,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
     }
   };
 
-  // Handle scroll event to update canvas image
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop - heroSequenceRef.current.offsetTop;
@@ -165,7 +165,7 @@ export default CanvasChairScroll;
 // Styled Components
 const HeroSequenceWrapper = styled.div`
 
-  height: 730vh;
+  height: 930vh;
 `;
 
 const StickyElement = styled.div`

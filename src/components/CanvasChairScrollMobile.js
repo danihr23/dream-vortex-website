@@ -12,7 +12,7 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
   const imagesRef = useRef([]);
   const heroSequenceRef = useRef(null);
 
-  // Preload images
+
   useEffect(() => {
     const images = [];
     for (let i = 1;i < frameCount; i++) {
@@ -21,7 +21,7 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
       img.onload = () => {
         images[i] = img;
         if (i === 1) {
-          drawImage(1); // Draw the first image after it has loaded
+          drawImage(1);
         }
       };
       img.onerror = () => {
@@ -31,13 +31,13 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
     imagesRef.current = images;
   }, []);
 
-  // Draw the image on the canvas
+
   const drawImage = (frameIndex) => {
     const canvas = canvasRef.current;
     if (canvas && imagesRef.current[frameIndex]) {
       const ctx = canvas.getContext('2d');
       const image = imagesRef.current[frameIndex];
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+      ctx.clearRect(0, 0, canvas.width, canvas.height); 
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
       console.log(canvas.height)
@@ -124,7 +124,7 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
     }
   };
 
-  // Handle scroll event to update canvas image
+ 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop - heroSequenceRef.current.offsetTop;
