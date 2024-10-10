@@ -5,7 +5,7 @@ function getCurrentFrame(index) {
     return `/assets/new/ezgif-frame-${index}.webp`;
 }
 
-const frameCount = 616;
+const frameCount = 777;
 //const { innerWidth: width, innerHeight: height } = window;
 const CanvasChairScroll = ({setIsToolbarVisible})=>{
   const canvasRef = useRef(null);
@@ -40,7 +40,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
       ctx.clearRect(0, 0, canvas.width, canvas.height); 
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-      if (frameIndex >= 43 && frameIndex <= 57) {
+      if (frameIndex >= 43 && frameIndex <= 80) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -48,7 +48,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         ctx.fillText('Handstitched and designed', 1450, 280);
         ctx.fillText(' for ultimate comfort', 1450, 330);
       }
-      if (frameIndex >= 145 && frameIndex <= 159) {
+      if (frameIndex >= 167 && frameIndex <= 205) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -56,7 +56,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         ctx.fillText('LED lights displaying over', 340, 420);
         ctx.fillText('  16M colours', 340, 470);
       }
-      if (frameIndex >= 245 && frameIndex <= 261) {
+      if (frameIndex >= 292 && frameIndex <= 330) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -64,7 +64,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         ctx.fillText('Durable, lightweight and', 310, 440);
         ctx.fillText('scratch-resistant', 310, 490);
       }
-      if (frameIndex >= 326 && frameIndex <= 337) {
+      if (frameIndex >= 391 && frameIndex <= 429) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -72,7 +72,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         ctx.fillText('360° horizontal rotation', 430, 710);
         ctx.fillText('and up to 90° vertical tilt', 430, 760);
       }
-      if (frameIndex >= 441 && frameIndex <= 454) {
+      if (frameIndex >= 531 && frameIndex <= 569) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -81,7 +81,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         ctx.fillText('and cooling system', 1330, 830);
       }
 
-      if (frameIndex >= 534 && frameIndex <= 547) {
+      if (frameIndex >= 646 && frameIndex <= 685) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -89,7 +89,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         ctx.fillText('immersive scent diffusion', 880, 340);
       
       }
-      if (frameIndex >= 602 && frameIndex <= 616) {
+      if (frameIndex >= 740 && frameIndex <= 777) {
         ctx.fillStyle = 'rgba(0, 191, 188, 1)';
         ctx.font = 'italic 40px Lato';
         ctx.textAlign = 'center';
@@ -131,7 +131,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount))
       );
 
-      if(frameIndex >=647 ){
+      if(frameIndex >=775 ){
         setIsToolbarVisible(true)
       }else{
         setIsToolbarVisible(false)

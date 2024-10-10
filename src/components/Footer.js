@@ -53,9 +53,9 @@ const Footer = ({ onClickPrivacy }) => {
     return (
         <Wrapper>
             <LogosWrapper >
-                {logos.map((item, index) => (
+                {/* {logos.map((item, index) => (
                     <Logo key={index} src={item.logo} alt="logo" />
-                ))}
+                ))} */}
             </LogosWrapper>
             <TextSection>
                 <LeftSideText>

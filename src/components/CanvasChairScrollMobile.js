@@ -135,7 +135,7 @@ const CanvasChairScrollMobile = ({setIsToolbarVisible})=>{
         Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount))
       );
 
-      if(frameIndex >=647 ){
+      if(frameIndex >=726 ){
         setIsToolbarVisible(true)
       }else{
         setIsToolbarVisible(false)

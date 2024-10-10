@@ -61,9 +61,9 @@ function App() {
         <ChairVideoComponent onScrollProp={onScroll}/>  
         { isPortrait ? <CanvasChairScrollMobile setIsToolbarVisible={setIsToolbarVisible} /> : <CanvasChairScroll setIsToolbarVisible={setIsToolbarVisible} />}   
         <About />
-        <Cookies setIsAgree={setIsAgree} isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />
-        <Projects />
-        <Team />
+        { isToolbarVisible &&   <Cookies setIsAgree={setIsAgree} isAgree={isAgree} isFooterPriveceClicked={isFooterPriveceClicked} />}
+        {/* <Projects />
+         <Team /> */}
         <ContactForm />
         <Footer onClickPrivacy={onPrivacyClick} />
       </ContentWrapper>
