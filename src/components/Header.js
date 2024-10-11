@@ -53,7 +53,7 @@ right:0 ;
 const Title= styled.h1`
   font-size:64px ;
 color: #fff;
-font-family: "Yrsa", serif;
+font-family: Yeseva One;
 @media (max-width: 1500px) {
     font-size: 40px;
   }

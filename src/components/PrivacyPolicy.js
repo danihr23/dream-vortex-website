@@ -177,7 +177,7 @@ padding-top:60px ;
 const Title = styled.h2`
 color: #fff;
 text-align:center ;
-font-family: "Yrsa", serif;
+font-family: Yeseva One;
 font-size:100px ;
 font-weight: 400;
 @media (max-width: 1500px) { 

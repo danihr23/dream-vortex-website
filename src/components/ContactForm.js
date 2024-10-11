@@ -102,7 +102,7 @@ position: relative;
 const Title = styled.h2`
 color: #fff;
 text-align:center ;
-font-family: "Yrsa", serif;
+font-family: Yeseva One;
 font-optical-sizing: auto;
 font-style: normal;
 font-size:100px ;

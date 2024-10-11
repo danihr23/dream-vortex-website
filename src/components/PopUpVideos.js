@@ -215,7 +215,7 @@ const TextWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: 'Yrsa', serif;
+ font-family: Yeseva One;
   font-size: 36px;
   color: #fff;
   @media (max-width: 1500px) {

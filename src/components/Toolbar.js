@@ -64,7 +64,7 @@ background-size: 100% auto;
 `;
 
 const Contact = styled.div`
-font-family: "Yrsa", serif;
+font-family: Yeseva One;
 font-weight:400 ;
 text-align: center;
 padding-top: 12px;
