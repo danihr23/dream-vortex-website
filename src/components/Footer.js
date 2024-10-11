@@ -64,7 +64,7 @@ const Footer = ({ onClickPrivacy }) => {
                             <Text onClick={onClickPrivacy}>Privacy Policy</Text>
                         </a>
                     </PrivacyDiv>
-                    <IconWrapper>
+                    {/* <IconWrapper>
                         <a href='https://www.linkedin.com/' target=" _blank">
                             <Icon background={linktin} />
                         </a>
@@ -78,7 +78,7 @@ const Footer = ({ onClickPrivacy }) => {
                         </a>
 
 
-                    </IconWrapper>
+                    </IconWrapper> */}
                 </LeftSideText>
                 <RightSideText>
                     <TextTitle>
