@@ -169,7 +169,7 @@ export default CanvasChairScrollMobile;
 // Styled Components
 const HeroSequenceWrapper = styled.div`
 
-  height: 730vh;
+  height: 1230vh;
 `;
 
 const StickyElement = styled.div`

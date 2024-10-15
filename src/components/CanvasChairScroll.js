@@ -11,8 +11,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
   const canvasRef = useRef(null);
   const imagesRef = useRef([]);
   const heroSequenceRef = useRef(null);
-  const [isScrollPaused, setIsScrollPaused] = useState(false); // State to control scroll pausing
- 
+
   useEffect(() => {
     const images = [];
     for (let i = 1;i < frameCount; i++) {
@@ -137,30 +136,13 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         setIsToolbarVisible(false)
       }
 
-      if (isScrollPaused) {
-        return;
-      }
-
       drawImage(frameIndex);
-
-      if ((frameIndex >= 48 && frameIndex <= 52) || (frameIndex >= 178 && frameIndex <= 183) || (frameIndex >= 299 && frameIndex <= 304)|| (frameIndex >= 399 && frameIndex <= 404) || (frameIndex >= 539 && frameIndex <= 544) || (frameIndex >= 656 && frameIndex <= 661)) {
-        setIsScrollPaused(true); 
-    
-        // Disable scrolling by hiding overflow
-        document.body.style.overflow = 'hidden';
-
-    
-        setTimeout(() => {
-          setIsScrollPaused(false); // Resume scrolling after 2 seconds
-          document.body.style.overflow = ''; // Re-enable scrolling by restoring overflow
-        }, 2000);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isScrollPaused]);
+  }, []);
 
   return (
     <>
@@ -182,7 +164,7 @@ export default CanvasChairScroll;
 // Styled Components
 const HeroSequenceWrapper = styled.div`
 
-  height: 930vh;
+  height: 1330vh;
 `;
 
 const StickyElement = styled.div`
