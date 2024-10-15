@@ -1,33 +1,27 @@
 
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components/macro';
-
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const form = useRef();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
 
+    emailjs
+      .sendForm('service_9g58ga9', 'template_yv68k08', form.current, {
+        publicKey: 'AujYhQl-cankXTk7B',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
@@ -37,15 +31,13 @@ const ContactForm = () => {
         <TextTitle>GET IN TOUCH</TextTitle>
         <Text>If you have any questions or concerns, please do not hesitate to get in touch with our team by filling out our contact form.
         </Text>
-    <FormContainer onSubmit={handleSubmit}  action="https://formsubmit.co/danailhristov23@gmail.com" method="POST" >
+    <FormContainer ref={form}  onSubmit={sendEmail} >
       <FormGroup>
         <Label htmlFor="name">Name*</Label>
         <Input
           type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
+          id="user_name"
+          name="user_name"
           required
         />
       </FormGroup>
@@ -54,10 +46,8 @@ const ContactForm = () => {
         <Label htmlFor="email">Email*</Label>
         <Input
           type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
+          id="user_email"
+          name="user_email"
           required
         />
       </FormGroup>
@@ -67,8 +57,6 @@ const ContactForm = () => {
         <TextArea
           id="message"
           name="message"
-          value={formData.message}
-          onChange={handleInputChange}
           rows="5"
           required
         />

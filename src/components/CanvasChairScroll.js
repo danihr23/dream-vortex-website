@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, } from 'react';
+import React, { useRef, useEffect, useState} from 'react';
 import styled from 'styled-components/macro';
 
 function getCurrentFrame(index) {
@@ -11,7 +11,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
   const canvasRef = useRef(null);
   const imagesRef = useRef([]);
   const heroSequenceRef = useRef(null);
-
+  const [isScrollPaused, setIsScrollPaused] = useState(false); // State to control scroll pausing
  
   useEffect(() => {
     const images = [];
@@ -137,13 +137,30 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
         setIsToolbarVisible(false)
       }
 
+      if (isScrollPaused) {
+        return;
+      }
+
       drawImage(frameIndex);
+
+      if ((frameIndex >= 48 && frameIndex <= 55) || (frameIndex >= 178 && frameIndex <= 185) || (frameIndex >= 299 && frameIndex <= 310)|| (frameIndex >= 399 && frameIndex <= 410) || (frameIndex >= 539 && frameIndex <= 549) || (frameIndex >= 656 && frameIndex <= 665)) {
+        setIsScrollPaused(true); 
+    
+        // Disable scrolling by hiding overflow
+        document.body.style.overflow = 'hidden';
+
+    
+        setTimeout(() => {
+          setIsScrollPaused(false); // Resume scrolling after 2 seconds
+          document.body.style.overflow = ''; // Re-enable scrolling by restoring overflow
+        }, 2000);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isScrollPaused]);
 
   return (
     <>
