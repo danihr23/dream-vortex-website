@@ -143,7 +143,7 @@ const CanvasChairScroll = ({setIsToolbarVisible})=>{
 
       drawImage(frameIndex);
 
-      if ((frameIndex >= 48 && frameIndex <= 55) || (frameIndex >= 178 && frameIndex <= 185) || (frameIndex >= 299 && frameIndex <= 310)|| (frameIndex >= 399 && frameIndex <= 410) || (frameIndex >= 539 && frameIndex <= 549) || (frameIndex >= 656 && frameIndex <= 665)) {
+      if ((frameIndex >= 48 && frameIndex <= 52) || (frameIndex >= 178 && frameIndex <= 183) || (frameIndex >= 299 && frameIndex <= 304)|| (frameIndex >= 399 && frameIndex <= 404) || (frameIndex >= 539 && frameIndex <= 544) || (frameIndex >= 656 && frameIndex <= 661)) {
         setIsScrollPaused(true); 
     
         // Disable scrolling by hiding overflow
