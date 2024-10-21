@@ -10,8 +10,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_9g58ga9', 'template_yv68k08', form.current, {
-        publicKey: 'AujYhQl-cankXTk7B',
+      .sendForm('service_pfd1o8d', 'template_245igwh', form.current, {
+        publicKey: 'dNW5pWo3DRIJUacxT',
       })
       .then(
         () => {
@@ -37,7 +37,7 @@ const ContactForm = () => {
         <Input
           type="text"
           id="user_name"
-          name="user_name"
+          name="to_name"
           required
         />
       </FormGroup>
@@ -47,7 +47,7 @@ const ContactForm = () => {
         <Input
           type="email"
           id="user_email"
-          name="user_email"
+          name="from_name"
           required
         />
       </FormGroup>
