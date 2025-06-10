@@ -1,5 +1,6 @@
 
 import React, { useCallback, useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import IntroScreen from './IntroScreen';
 import CanvasChairScroll from './CanvasChairScroll';
@@ -67,6 +68,7 @@ function Home() {
         <ContactForm />
         <Footer onClickPrivacy={onPrivacyClick} />
       </ContentWrapper>
+      <Outlet />
     </Wrapper>
   );
 }

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './components/Home';
 
-
+import ExternalRedirect from "./components/ExternalRedirect";
 function App() {
   return (
     <BrowserRouter>
@@ -11,10 +11,7 @@ function App() {
           {/* External redirect route */}
         <Route
             path="/barcelona"
-           component ={()=>{
-            window.location.href = 'https://barcelona.dreamvortex.com';
-            return null;
-           }}
+            element={<ExternalRedirect to="https://barcelona.dreamvortex.com"/>}
           />
         </Route>
       </Routes>
