@@ -1,18 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import ExternalRedirect from "./components/ExternalRedirect";
+import ExternalRedirect from './components/ExternalRedirect';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-
+        <Route path='/' element={<Home />} />
         {/* Wildcard to catch all /barcelona/* routes */}
-        <Route path="/barcelona/*" element={<ExternalRedirect baseUrl="https://barcelona.dreamvortex.com" />} />
-
-        {/* Optional: fallback for other unknown routes */}
-        <Route path="*" element={<p>Page not found</p>} />
+        <Route path='/barcelona/*' element={<ExternalRedirect />} />
+        {/* Optional: fallback to home component for other unknown routes */}
+        <Route path='*' element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

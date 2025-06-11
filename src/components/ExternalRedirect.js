@@ -1,23 +1,19 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 
-const ExternalRedirect = ({ baseUrl }) => {
-  const location = useLocation();
+const REDIRECT_URL = 'https://barcelona.dreamvortex.com/';
 
+const ExternalRedirect = () => {
   useEffect(() => {
-    // location.pathname gives /barcelona/faq
-    // Strip /barcelona/ and preserve the rest
-    const subPath = location.pathname.replace(/^\/barcelona\/?/, "");
+    const fullUrl = window.location.href;
+    const redirectUrl = fullUrl
+      .split('/barcelona')
+      .map((value, index) => (index === 0 ? REDIRECT_URL : value))
+      .join('');
 
-    // location.hash gives the fragment like "#section"
-    const hash = window.location.hash; // optional, in case they typed /barcelona/#something
+    window.location.href = redirectUrl;
+  }, []);
 
-    const finalUrl = `${baseUrl}${subPath}${hash}`;
-
-    window.location.href = finalUrl;
-  }, [location, baseUrl]);
-
-  return <p>Redirecting...</p>;
+  return null;
 };
 
 export default ExternalRedirect;
